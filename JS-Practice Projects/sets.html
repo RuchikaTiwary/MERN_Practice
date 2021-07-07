@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-Practice</title>
+</head>
+
+<body>
+    <div id="out"></div>
+    <script>
+        let team = new Set();
+        team.add("warriors");
+        team.add("gladiator");
+        team.add("aveners");
+
+        // alert(team.has("gladiator"));
+
+        // Set Constructor
+        let family = new Set(["Mother", "Father", "Brother"]);
+        // alert(family.has("Father"));
+
+        // Set 
+        let actors = new Set().add("action").add("thriller").add("romance");
+        /*if(actors.has("thriller")){
+            alert("Present!!")
+        }*/
+
+        for (let act of actors) {
+            alert(act);
+        }
+
+    </script>
+</body>

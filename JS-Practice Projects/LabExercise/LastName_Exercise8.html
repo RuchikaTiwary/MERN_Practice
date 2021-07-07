@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-</title>
+</head>
+
+<body>
+    <div id="first"></div>
+    <script>
+        let number1 = prompt("Enter first Number ");
+        let number2 = prompt("Enter second Number ");
+        let operation = prompt("Enter an operation ");
+        let output=0;
+
+        function performOperation(num1, opr, num2) {
+            output += parseInt(num1) + opr + parseInt(num2);
+            console.log(output);
+            return output;
+        }
+
+
+        document.getElementById("first").innerHTML = number1 + operation + number2 + " = " + 
+                                                        performOperation(number1,operation,number2);
+
+    </script>
+</body>

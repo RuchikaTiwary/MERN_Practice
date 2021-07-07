@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-</title>
+</head>
+
+<body>
+    <div id="out"></div>
+    <script>
+        let rows = prompt("Input number of rows", 1);
+        let columns = prompt("Input number of columns", 1);
+        let specialChar = "";
+
+        for (let x = 0; x < rows; x++) {
+            for (let y = 0; y < columns; y++) {
+                specialChar += "*";
+            }
+            specialChar += "<br/>";
+        }
+        document.getElementById("out").innerHTML = specialChar;
+
+    </script>
+</body>

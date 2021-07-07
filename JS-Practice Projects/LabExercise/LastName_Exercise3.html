@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-</title>
+</head>
+
+<body>
+    <div id="first"></div>
+    <script>
+        let operand1 = prompt("what's your first Number ");
+        let operand2 = prompt("what's your second Number ");
+
+        let outputSum = parseInt(operand1) + parseInt(operand2);
+        let outputSubtract = parseInt(operand1) - parseInt(operand2);
+        let outputMultiply = parseInt(operand1) * parseInt(operand2);
+        let outputEqual = (parseInt(operand1) == parseInt(operand2));
+        let outputLess = (parseInt(operand1) < parseInt(operand2));
+        let outputDivide = ((parseInt(operand2)%parseInt(operand2)) == 0);
+
+        document.getElementById("first").innerHTML = "What is the sum of operand1 and operand2?: " + 
+        outputSum + "<br/>What is the result if you subtract operand2 from operand1?" + outputSubtract +
+         "<br/>What is the result if you multiple operand1 by operand2?" + outputMultiply +
+        "<br/>Is operand1 equal to operand2?" + outputEqual +
+        "<br/>Is operand1 smaller than operand2?" + outputLess +
+        "<br/>Can you divide Operand2 evenly in to operand1?" + outputDivide;       
+
+    </script>
+</body>

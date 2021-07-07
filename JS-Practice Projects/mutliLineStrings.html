@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-Practice</title>
+</head>
+
+<body>
+    <div id="out"></div>
+    <script>
+        let message = `Roses are red,
+        Violets are blue !
+        I like chocolates,
+        what about you ?`;
+
+        // console.log(message);
+        // document.getElementById("out").innerHTML = message;
+
+        let display = "Roses are red,\
+        Violets are blue !\
+        I like chocolates,\
+        what about you ?"
+
+        // console.log(display);
+        // document.getElementById("out").innerHTML = display;
+
+        let employee = {
+            name: "Ruchi",
+            occupation: "engineer",
+            location: "BLR"
+        }
+
+        let employeeInfo = function(object) {
+            let output = `${object.name} is an ${object.occupation} and lives in ${object.location}`;
+            return output;
+        }
+
+        document.getElementById("out").innerHTML = employeeInfo(employee);
+
+
+        let instructor= "Mark";
+
+        // console.log(`Hello ${employee.name}`);
+        // console.log(`Instructor: ${instructor}`);
+
+
+    </script>
+</body>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-</title>
+</head>
+
+<body>
+    <div id="out"></div>
+    <script>
+        var names = [];
+        var gpa = "";
+        var output = 0;
+
+        while (gpa != "XXX") {
+            gpa = prompt("Enter a gpa or XXX to Stop");
+
+            if (gpa != "XXX") {
+                names.push(gpa);
+            }
+        }
+        for (var x = 0; x < names.length; x++) {
+            output += names[x];
+            document.getElementById("out").innerHTML += names[x] + "<br/>";
+            console.log(names.length + "||" + output)
+            // alert(names[x]);
+        }
+        document.getElementById("out").innerHTML += "A. The GPA’s in order from largest to smallest:" +
+            (names.sort()).reverse() + "<br/>";
+
+        document.getElementById("out").innerHTML += "B. The average of the GPA’s:" +
+            (output / names.length) + "<br/>";
+
+        document.getElementById("out").innerHTML += "C. The highest GPA for the class:" +
+            (names.sort()).pop() + "<br/>" + "C. The lowest GPA for the class:" + (names.sort())[0];
+
+        for (let x = 0; x < names.length; x++) {
+            if (names[x] > 3.4)
+                output += names[x];
+        }
+
+        document.getElementById("out").innerHTML += "D. A list of the outstanding GPA’s (Defined as GPA’s over 3.4):" +
+            output;
+
+    </script>
+</body>

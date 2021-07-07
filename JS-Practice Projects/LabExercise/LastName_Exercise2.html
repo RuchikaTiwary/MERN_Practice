@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab #2</title>
+</head>
+
+<body>
+    <div id="out"></div>
+    <div id="put"></div>
+    <script>
+        name1 = "Tom";
+        name2 = "Bob";
+        name3 = "Mary";
+        name4 = "Caitlyn";
+        name5 = "Red";
+        name6 = "Douglas";
+        name7 = "Judy";
+        name8 = "Susan";
+
+        let separator = "";
+        separator = prompt("Enter separator ");
+        document.getElementById("out").innerHTML = name1 + " " + separator + " " +
+            name2 + " " + separator + " " +
+            name3 + " " + separator + " " +
+            name4 + " " + separator + " " +
+            name5 + " " + separator + " " +
+            name6 + " " + separator + " " +
+            name7 + " " + separator + " " +
+            name8 + " " + separator
+
+        let number = prompt("Enter number ");
+
+        let output = "Number 1: " + parseInt(number);
+        output += "<br/> Number 2: " + parseInt(number) + 10;
+        output += "<br/> Number 3: " + parseInt(number) + 20;
+        output += "<br/> Number 4: " + parseInt(number) + 50;
+        output += "<br/> Number 5: " + parseInt(number) + 1568;
+        document.getElementById("put").innerHTML = output;
+
+    </script>
+</body>
+
+</html

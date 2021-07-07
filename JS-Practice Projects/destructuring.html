@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-</title>
+</head>
+
+<body>
+    <div id="out"></div>
+    <script>
+        let person = {
+            name: "Ruchi",
+            city: "BLR",
+            state: "KA"
+        }
+        
+        // console.log(person.name);
+        // console.log(person.state);
+
+        let { name, city } = person;
+        console.log(name);
+        console.log(city);
+
+        let company = {
+            name: "Hun",
+            social: {
+                facebook: "www.fa",
+                twitter: "www.tw"
+            }
+        }
+
+        let {facebook, twitter} = company.social;
+        console.log(facebook);
+        console.log(twitter);
+
+    </script>
+</body>

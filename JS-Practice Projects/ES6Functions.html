@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-Practice</title>
+</head>
+
+<body>
+    <div id="out"></div>
+    <script>
+        // Lambda Function
+        let greetings = (name) => ('Greetings, ' + name);
+        let square = (side) => (side * side);
+
+        alert(greetings("Ruchi"));
+        document.getElementById("out").innerHTML = square(2);
+
+
+        /*// Function constructor
+        let greetings = new Function("name", "return ('Greetings '+name)");
+        let greet = greetings("val");
+        alert(greet);
+
+        // anonymous function
+        let anonymous = function(name) {
+            return alert('Greetings ' + name + " !!!");
+        }
+        anonymous("Ruchi");
+
+        function getMessage(name) {
+            let message = "Greetings "+ name + " !!";
+            message += " <br/> Have a great day !!"
+            return message;
+        }
+
+        let fetchMessage = getMessage("Ruchika");
+        document.getElementById("out").innerHTML = fetchMessage;
+
+        // Default Params
+        function multiply(x=2, y=9) {
+            return x*y;
+        }
+
+        alert(multiply(9));
+
+        // REST params
+        function restFn(...params) {
+            for(let i=0; i< params.length; i++)
+                alert(params[i]);
+        }
+        restFn("2", "3", "6", "9");*/
+
+    </script>
+</body>

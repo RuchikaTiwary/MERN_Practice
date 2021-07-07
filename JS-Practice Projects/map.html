@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-Practice</title>
+</head>
+
+<body>
+    <div id="out"></div>
+    <script>
+        let team = new Map();
+        team.set("one", "warriors");
+        team.set("two", "gladiator");
+        team.set("three", "aveners");
+
+        // alert(team.get("one"));
+
+        let family = new Map();
+        family.set("monther", "usha").set("father", "sanjay");
+
+        // alert(family.get("father"));
+
+        // Map Constructor
+        let actors = new Map([
+            ['action', 'Tiger'],
+            ['romance', 'shahrukh'],
+            ['thriller', 'akshay']
+        ]);
+
+        // actors.clear();
+        document.getElementById("out").innerHTML = actors.get("romance");
+        
+        // For...of 
+        /*for(let a of actors.entries()){
+            alert(a[0]+ ": " + a[1]);
+        }*/
+
+        // Keys
+        /*for(let a of actors.keys()){
+            alert(a);
+        }*/
+
+        // Values
+        for(let a of actors.values()){
+            alert(a);
+        }
+
+
+    </script>
+</body>

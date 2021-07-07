@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-</title>
+</head>
+
+<body>
+    <div id="out"></div>
+    <script>
+        var os = ["windows", "android", "linux", "ubunto"]
+        var family = ["Ruchi", "Jhun", "Tun", "Kaj"]
+
+        document.getElementById("out").innerHTML = os[1] + "<br/>";
+        document.getElementById("out").innerHTML += family[2];
+
+        os[0] = "unix";
+
+        let output = "";
+        for (let i = 0; i < os.length; i++) {
+            output += os[i];
+            output += "<br/>"
+        }
+        document.getElementById("out").innerHTML = output;
+
+        os.push("dos");
+        document.getElementById("out").innerHTML = os.sort();
+
+        family.pop();
+        document.getElementById("out").innerHTML += "<br/>" +family.sort();
+
+
+
+    </script>
+</body>

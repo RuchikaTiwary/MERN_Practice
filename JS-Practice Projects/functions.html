@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-Practice</title>
+</head>
+<body>
+    <div id = "out"></div>
+    <script>
+        function name() {
+            alert("Hello World!!");
+        }
+        // name();
+        
+        function callName(name) {
+            document.getElementById("out").innerHTML += "Hello "+name+" !! <br/>";
+        }
+        // callName("Ruchi");
+        // callName("Ryan");
+
+        function getAge(name, age) {
+            alert(name+" is "+age +" years old");
+        }
+        // getAge("Ruchi", 20);
+
+        var name;
+        function addTen(value) {
+            name="Ruchi";
+           var sum = value+10;
+           return sum;
+        }
+        alert(addTen(1));
+        alert(name);
+
+    </script>
+</body>
