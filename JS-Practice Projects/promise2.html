@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-</title>
+</head>
+
+<body>
+    <div id="img-holder" style="width: 10px; height: 10px;"></div>
+    <script>
+        var img = null;
+        let imgPromise = new Promise(function (resolve, reject) {
+            img = new Image();
+            img.addEventListener('load', resolve(img));
+            img.addEventListener('error', reject("Couldn't load image!!"));
+            img.src = "http://thecatapi.com/api/images/get?format=src&type=jpg&size=medium";
+        })
+
+        imgPromise.then(function (fromResolve) {
+            console.log("Image is loaded !!");
+            let node = document.getElementById("img-holder");
+
+            node.appendChild(img);
+        }).catch(function (fromReject) {
+            console.log(fromReject);
+        });
+
+    </script>
+</body>

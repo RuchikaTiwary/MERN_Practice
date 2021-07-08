@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- <script src="first.js"></script> -->
+    <title>JS-</title>
+</head>
+
+<body>
+    <div id="out"></div>
+    <script>
+        let promiseToClean = new Promise(function(resolve, reject) {
+            let isClean = false;
+
+            if(isClean) {
+                resolve("Clean !!");
+            }else{
+                reject("Not Clean !!");
+            }
+        })
+
+        promiseToClean.then(function(fromResolve){
+            console.log("The room is "+ fromResolve);
+        }).catch(function(fromReject){
+            console.log(fromReject);
+        });
+
+    </script>
+</body>
