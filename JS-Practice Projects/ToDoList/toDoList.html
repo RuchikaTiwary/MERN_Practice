@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <title>JS-</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="lockr.js"></script>
+</head>
+
+<body>
+    <div id="out"></div>
+    <ons-page>
+        <ons-toolbar>
+            <div class="center">To Do List</div>
+        </ons-toolbar>
+
+        <section style="padding: 8px;">
+            <textarea class="textarea" rows="3" placeholder="Enter your To do item..." maxlength="140" required
+                id="toDoItem" style=" margin: 10px; width: 95%;"></textarea>
+            <button class="button butto-material" id="btnTodo" style="width: 95%; margin: 10px;">Add to list</button>
+            </div>
+        </section>
+        <section id="result"></section>
+
+    </ons-page>
+    <script src="toDoList.js"></script>
+</body>

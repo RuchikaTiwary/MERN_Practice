@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+    <title>JS-</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="key.js"></script>
+</head>
+
+<body>
+    <div id="out"></div>
+    <ons-page>
+        <ons-toolbar>
+            <div class="center">Weather Wizard</div>
+        </ons-toolbar>
+
+        <section style="padding: 8px;">
+            <div style="text-align: center; margin-top: 30px;">
+                <div style="display: flex;">
+                    <ons-input id="cityname" modifier="underbar" placeholder="City Name" float class="clearance">
+                    </ons-input>
+                    </ons-input>
+                </div>
+
+                <!-- <ons-button modifier="large" id="btnWeather">Get Weather</ons-button> -->
+                <div style="margin-top: 10px;">
+                    <button class="button--large--cta" modifier="large" id="btnWeather"
+                        style="width: 95%; margin: 0 auto;">Get Weather</button>
+                </div>
+            </div>
+        </section>
+        <section style="padding: 8px;">
+            <output id="result"></output>
+        </section>
+
+    </ons-page>
+    <script src="weather.js"></script>
+</body>
