@@ -1,4 +1,5 @@
 const uuid = require('uuid');
+const { validationResult } = require('express-validator');
 
 const HttpError = require('../models/http-error');
 
@@ -14,10 +15,15 @@ const getUsers = (req, res, next) => {
 }
 
 const signup = (req, res, next) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        throw new HttpError('Invalid input, please check your input !!', 422);
+    }
+
     const { name, email, password } = req.body;
     const hasUser = DUMMY_USERS.find(p => p.email === email);
 
-    if(hasUser){
+    if (hasUser) {
         throw new HttpError('Could not create user, email already exit', 422);
     }
 
@@ -39,7 +45,7 @@ const login = (req, res, next) => {
     if (!identifiedUser || identifiedUser.password !== password) {
         throw new HttpError('Couldnot identify user, credentials seem to be wrong', 401);
     }
-    res.json({message: 'Logged in'});
+    res.json({ message: 'Logged in' });
 }
 
 exports.getUsers = getUsers;

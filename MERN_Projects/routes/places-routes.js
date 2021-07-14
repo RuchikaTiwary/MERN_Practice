@@ -10,10 +10,15 @@ router.get('/:pid', placesController.placesById);
 
 router.get('/user/:uid', placesController.placesByUserId);
 
-router.patch('/:pid', placesController.updatePlaces);
+router.patch('/:pid', [check('title').not().isEmpty(),
+check('description').isLength({ min: 5 })],
+    placesController.updatePlaces);
+
 router.delete('/:pid', placesController.deletePlaces);
 
-router.post('/', check('title').not().isEmpty(),
- placesController.createPlace);
+router.post('/', [check('title').not().isEmpty(),
+check('description').isLength({ min: 5 }),
+check('address').not().isEmpty()],
+    placesController.createPlace);
 
 module.exports = router;
